@@ -17,7 +17,7 @@ module WebpackerSSR
     private_class_method :load_from_dev_server
 
     def self.load_from_file(asset_path)
-      File.read(::Rails.root.join('public', asset_path.split("/")[-2..-1].join("/")))
+      File.read(::Rails.root.join('public', asset_path.split("/")[-3..-1].join("/")))
     end
     private_class_method :load_from_file
   end
